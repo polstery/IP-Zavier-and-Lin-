@@ -1,0 +1,27 @@
+sources:
+
+sections:
+quiz: https://thumbs.dreamstime.com/b/quiz-18898083.jpg
+
+forum: https://esquire-sg.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2020/01/22121302/Steer-deflecting-Conversation-main-image.jpg
+
+chibi: https://thumbs.dreamstime.com/b/dog-cute-wait-pet-owner-pet-shop-bangkok-thailand-april-mixed-breed-shih-tzu-pomeranian-poodle-food-cat-91957600.jpg
+
+settings: https://images.unsplash.com/photo-1560574188-6a6774965120?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z2VhcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80
+
+
+
+daily tasks: https://www.pexels.com/photo/pen-calendar-to-do-checklist-3243/
+
+normal practice: https://www.pexels.com/photo/math-equations-written-on-whiteboard-6325944/
+
+hard practice: https://www.pexels.com/photo/person-holding-a-chalk-in-front-of-the-chalk-board-714699/
+
+
+
+
+Profile demo pics:
+https://www.pexels.com/photo/shallow-focus-photo-of-woman-in-gray-white-and-brown-striped-button-up-shirt-2726111/
+https://www.pexels.com/photo/freckled-face-3763188/
+https://www.pexels.com/photo/grayscale-photo-of-french-mastiff-close-up-photo-1435517/
+https://www.pexels.com/photo/man-person-people-old-34534/
