@@ -25,7 +25,7 @@
 	<div class="container-fluid" id="mainBody">
 		<!--Main Body-->
 		<div class="row justify-content-center">
-			<div class="col-lg-6" id="headerText">
+			<div class="col-lg-8" id="headerText">
 				<!--potential area for testimonials / tips ..etc-->
 				<figure class="text-center">
 					<blockquote class="blockquote">
@@ -39,16 +39,19 @@
 		</div>
 
 		<div class="row justify-content-center">
-			<!--EMBEDED SketchFab "video" + interactions-->
-			<div class="col-lg-4" id="sketchfab">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo quas error perspiciatis. Natus eius
-					sit vero temporibus iusto, iure ipsa nostrum vel blanditiis porro repellat sequi magnam autem eos.
-				</p>
+			<!--EMBEDDED SketchFab video-->
+			<div class="col-lg-4">
+				<div class="sketchfab-embed-wrapper" id="sketchfab">
+					<iframe title="Snake" width="100%" height="450px"
+						src="https://sketchfab.com/models/04a6181efb1f4ba1b226b935d9062fe4/embed?autospin=0&autostart=1&ui_stop=0&ui_infos=0&ui_hint=0&ui_theme=0">
+					</iframe>
+				</div>
+
 			</div>
 
 			<!--Section Header / links-->
 			<div class="col-lg-7" id="section-headers">
-				<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="row row-cols-md-3 row-cols-1 g-3">
 					<div class="col" id="section-head">
 						<div class="card h-100">
 							<a href="html/quiz.html"><img src="img/section-quiz.jpg" class="card-img-top"
@@ -96,7 +99,7 @@
 				</div>
 
 				<div class="row" id="configBtns">
-					<div class="d-grid gap-5 d-md-flex justify-content-md-center">
+					<div class="col-md-6 offset-md-3">
 						<a class="btn btn-warning align-center" href="#">---Settings---</a>
 						<a class="btn btn-danger align-center" href="#">---Log-Out---</a>
 					</div>

@@ -15,7 +15,7 @@
     <nav class="navbar navbar-light" id="nav">
         <a class="navbar-brand mb-0 h1" href="#">
             <img src="../img/logo.png" alt="logo" width="60px" height="auto" class="d-inline-block align-center">
-            Quiz
+            Forum
         </a>
         <button class="navbar-toggler" id="menu-toggle" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,8 +27,8 @@
     <div id="sidebar-nav">
         <div id="sidebar-menu" class="btn-group-vertical d-grid gap-3 col-12 mx-auto">
             <a class="btn btn-primary" href="../index.html">Home</a>
-            <a class="btn btn-warning" href="#">-----Quizzes-----</a>
-            <a class="btn btn-warning" href="forum.html">-----Forums-----</a>
+            <a class="btn btn-warning" href="quiz.html">-----Quizzes-----</a>
+            <a class="btn btn-warning" href="#">-----Forums-----</a>
             <a class="btn btn-warning" href="chibi.html">-----Chibi-----</a>
             <a class="btn btn-warning" href="#">-----Settings-----</a>
             <a class="btn btn-danger" href="#">Log-Out</a>
@@ -39,36 +39,53 @@
 
         <!--Main Body-->
         <div class="row justify-content-center">
-
-            <!--EMBEDED SketchFab "video" + interactions-->
-            <div class="col-lg-4" id="sketchfab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo quas error perspiciatis. Natus eius
-                    sit vero temporibus iusto, iure ipsa nostrum vel blanditiis porro repellat sequi magnam autem eos.
-                </p>
+            <div class="col-lg-8" id="headerText">
+                <!--potential area for testimonials / tips ..etc-->
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <p>Math. something something, community...good
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <cite title="Source Title">Professional At Math & Communities</cite>
+                    </figcaption>
+                </figure>
             </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!--EMBEDED SketchFab "video" + interactions-->
+            <div class="col-lg-4">
+                <div class="sketchfab-embed-wrapper" id="sketchfab">
+                    <iframe title="Snake" width="100%" height="450px"
+                        src="https://sketchfab.com/models/04a6181efb1f4ba1b226b935d9062fe4/embed?autospin=0&autostart=1&ui_stop=0&ui_infos=0&ui_hint=0&ui_theme=0">
+                    </iframe>
+                </div>
+            </div>
+
 
             <!--Forum section-->
             <div class="col-lg-7" id="forum-section">
                 <!--implement via js, use template boxes..etc-->
+
+                <!--Forum "box" showing 3 latest comments, use pill func to replace current page-col with specific forum-->
+                <div class="container-fluid forumClick">
+
+                </div>
             </div>
         </div>
+        <!--End of main body-->
 
-
-    </div>
-    <!--End of main body-->
-
-    <!--MCQ Quiz "page" - Large Modal (use js to hide other qns, 
-		when btn is clicked and only show selected qn)-->
-
-    <!--Script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+        <!--Script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
         </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
-    </script>
-    <script src="../js/pages.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
+        </script>
+        <script src="../js/pages.js"></script>
+        <script src="../js/forum.js"></script>
 
 </body>
 

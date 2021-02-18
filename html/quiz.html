@@ -42,12 +42,30 @@
 
 		<!--Main Body-->
 		<div class="row justify-content-center">
+			<div class="col-lg-8" id="headerText">
+				<!--potential area for testimonials / tips ..etc-->
+				<figure class="text-center">
+					<blockquote class="blockquote">
+						<p>Math is not about numbers, equations, computations, or algorithms: It is about
+							<em>Understanding</em>
+						</p>
+					</blockquote>
+					<figcaption class="blockquote-footer">
+						<cite title="Source Title">William Paul Thurston</cite>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
 
+		<div class="row justify-content-center">
 			<!--EMBEDED SketchFab "video" + interactions-->
-			<div class="col-lg-4" id="sketchfab">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo quas error perspiciatis. Natus eius
-					sit vero temporibus iusto, iure ipsa nostrum vel blanditiis porro repellat sequi magnam autem eos.
-				</p>
+			<div class="col-lg-4">
+				<div class="sketchfab-embed-wrapper" id="sketchfab">
+					<iframe title="Snake" width="100%" height="450px"
+						src="https://sketchfab.com/models/04a6181efb1f4ba1b226b935d9062fe4/embed?autospin=0&autostart=1&ui_stop=0&ui_infos=0&ui_hint=0&ui_theme=0">
+					</iframe>
+				</div>
+
 			</div>
 
 			<!--Quiz Section-->
@@ -70,7 +88,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduYrForm" id="edu-s1"
-									value="sec1">
+									value="1">
 								<label class="form-check-label" for="edu-s1">
 									Secondary 1
 								</label>
@@ -78,7 +96,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduYrForm" id="edu-s2"
-									value="sec2" disabled>
+									value="2" disabled>
 								<label class="form-check-label" for="edu-s2">
 									Secondary 2
 								</label>
@@ -86,7 +104,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduYrForm" id="edu-s3"
-									value="sec3" disabled>
+									value="3" disabled>
 								<label class="form-check-label" for="edu-s3">
 									Secondary 3
 								</label>
@@ -94,7 +112,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduYrForm" id="edu-s4"
-									value="sec4" disabled>
+									value="4" disabled>
 								<label class="form-check-label" for="edu-s4">
 									Secondary 4 / 5
 								</label>
@@ -107,7 +125,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduStrmForm" id="edu-exp"
-									value="exp">
+									value="express">
 								<label class="form-check-label" for="edu-exp">
 									Express
 								</label>
@@ -128,7 +146,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduDiffForm" id="diff-1"
-									value="easy">
+									value="1">
 								<label class="form-check-label" for="diff-1">
 									Easy
 								</label>
@@ -136,7 +154,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduDiffForm" id="diff-2"
-									value="intermediate">
+									value="2">
 								<label class="form-check-label" for="diff-2">
 									Intermediate
 								</label>
@@ -144,7 +162,7 @@
 
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" name="quizEduDiffForm" id="diff-3"
-									value="hard">
+									value="3">
 								<label class="form-check-label" for="diff-3">
 									Hard
 								</label>
@@ -152,8 +170,8 @@
 						</div>
 					</div>
 
-					<div class="row" style="margin-top: 15px; margin-bottom: 30px;" id="quiz-edu-topic-header">
-						<div class="col-5">
+					<div class="row" style="margin-top: 15px; margin-bottom: 30px;">
+						<div class="col-5" id="quiz-edu-topic">
 							<h5>Selected Topic(s):</h5>
 						</div>
 
@@ -164,7 +182,7 @@
 
 					<div class="container" id="quizAllTopics">
 						<!--Sec1 exp topics-->
-						<div class="container" id="quiz-edu-topic-s1">
+						<div class="container" id="quiz-edu-topic-s1exp">
 							<div class="row row-cols-1 g-4">
 								<div class="col">
 									<h6>Secondary 1 (Express)</h6>
@@ -175,7 +193,7 @@
 								<div class="col">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
-											id="topic-1" value="t1">
+											id="topic-1" value="1">
 										<label class="form-check-label" for="topic-1">
 											01: Factors and Multiples
 										</label>
@@ -185,7 +203,7 @@
 								<div class="col">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
-											id="topic-2" value="t2" disabled>
+											id="topic-2" value="2" disabled>
 										<label class="form-check-label" for="topic-2">
 											02: Real Numbers
 										</label>
@@ -195,7 +213,7 @@
 								<div class="col">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
-											id="topic-3" value="t3" disabled>
+											id="topic-3" value="3" disabled>
 										<label class="form-check-label" for="topic-3">
 											03: Approximation and Estimation
 										</label>
@@ -207,7 +225,7 @@
 								<div class="col">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
-											id="topic-4" value="t4" disabled>
+											id="topic-4" value="4" disabled>
 										<label class="form-check-label" for="topic-4">
 											04: Basic Algrebra and Algebraic Manipulations
 										</label>
@@ -217,7 +235,7 @@
 								<div class="col">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
-											id="topic-5" value="t5" disabled>
+											id="topic-5" value="5" disabled>
 										<label class="form-check-label" for="topic-5">
 											05: Simple Equations in One Variable
 										</label>
@@ -227,7 +245,7 @@
 								<div class="col">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
-											id="topic-6" value="t6" disabled>
+											id="topic-6" value="6" disabled>
 										<label class="form-check-label" for="topic-6">
 											06: Angles and Parallel Lines
 										</label>
@@ -239,7 +257,7 @@
 								<div class="col">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
-											id="topic-7" value="t7" disabled>
+											id="topic-7" value="7" disabled>
 										<label class="form-check-label" for="topic-7">
 											07: Triangles, Quadrilaterals and Other Polygons
 										</label>
