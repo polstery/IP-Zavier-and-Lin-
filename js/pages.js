@@ -24,4 +24,5 @@ $(document).ready(function () {
         $("#quiz-topic").toggleClass("formDisplayed");
     })
 
+
 }); //End of doc

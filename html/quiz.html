@@ -57,12 +57,11 @@
 
 				<!--Choose EDU LVL-->
 				<button class="btn btn-secondary" id="quiz-edu-btn">
-					<h5>Education
-						Year, Stream & Difficulty</h5>
+					<h5>Quiz Parameter Form</h5>
 				</button>
 
 				<!--forms-->
-				<div class="container-fluid" id="quiz-edu">
+				<div class="container-fluid formDisplayed" id="quiz-edu">
 					<div class="row row-cols-3 g-3">
 
 						<!--Year-->
@@ -107,7 +106,7 @@
 							<h5>Stream:</h5>
 
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="quiz-edu-strm-form" id="edu-exp"
+								<input class="form-check-input" type="checkbox" name="quizEduStrmForm" id="edu-exp"
 									value="exp">
 								<label class="form-check-label" for="edu-exp">
 									Express
@@ -115,8 +114,8 @@
 							</div>
 
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="quiz-edu-strm-form" id="edu-na"
-									value="na">
+								<input class="form-check-input" type="checkbox" name="quizEduStrmForm" id="edu-na"
+									value="na" disabled>
 								<label class="form-check-label" for="edu-na">
 									Normal Academic
 								</label>
@@ -128,7 +127,7 @@
 							<h5>Difficulty:</h5>
 
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="quiz-edu-diff-form" id="diff-1"
+								<input class="form-check-input" type="checkbox" name="quizEduDiffForm" id="diff-1"
 									value="easy">
 								<label class="form-check-label" for="diff-1">
 									Easy
@@ -136,7 +135,7 @@
 							</div>
 
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="quiz-edu-diff-form" id="diff-2"
+								<input class="form-check-input" type="checkbox" name="quizEduDiffForm" id="diff-2"
 									value="intermediate">
 								<label class="form-check-label" for="diff-2">
 									Intermediate
@@ -144,7 +143,7 @@
 							</div>
 
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" name="quiz-edu-diff-form" id="diff-3"
+								<input class="form-check-input" type="checkbox" name="quizEduDiffForm" id="diff-3"
 									value="hard">
 								<label class="form-check-label" for="diff-3">
 									Hard
@@ -152,29 +151,101 @@
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<!--Choose topics to be inputted in the quiz-->
-				<button class="btn btn-secondary" id="quiz-topic-btn">
-					<h5>Topics (to be included in quiz)</h5>
-				</button>
+					<div class="row" style="margin-top: 15px; margin-bottom: 30px;" id="quiz-edu-topic-header">
+						<div class="col-5">
+							<h5>Selected Topic(s):</h5>
+						</div>
 
-				<div class="container-fluid" id="quiz-topic">
-					<!--form-->
-					<div class="row row-cols-4 g-4">
-						<div class="col">
-							hello
+						<div class="col-5 offset-2">
+							<button class="btn btn-primary" id="checkAll">Select All Topics</button>
 						</div>
-						<div class="col">
-							no
-						</div>
-						<div class="col">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quam autem, sapiente magnam,
-							error neque eveniet vero vitae incidunt aspernatur quia vel totam eius minus iste corrupti
-							esse ipsa inventore?
-						</div>
-						<div class="col">
-							eww
+					</div>
+
+					<div class="container" id="quizAllTopics">
+						<!--Sec1 exp topics-->
+						<div class="container" id="quiz-edu-topic-s1">
+							<div class="row row-cols-1 g-4">
+								<div class="col">
+									<h6>Secondary 1 (Express)</h6>
+								</div>
+							</div>
+
+							<div class="row row-cols-3 g-4">
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
+											id="topic-1" value="t1">
+										<label class="form-check-label" for="topic-1">
+											01: Factors and Multiples
+										</label>
+									</div>
+								</div>
+
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
+											id="topic-2" value="t2" disabled>
+										<label class="form-check-label" for="topic-2">
+											02: Real Numbers
+										</label>
+									</div>
+								</div>
+
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
+											id="topic-3" value="t3" disabled>
+										<label class="form-check-label" for="topic-3">
+											03: Approximation and Estimation
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="row row-cols-3 g-4">
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
+											id="topic-4" value="t4" disabled>
+										<label class="form-check-label" for="topic-4">
+											04: Basic Algrebra and Algebraic Manipulations
+										</label>
+									</div>
+								</div>
+
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
+											id="topic-5" value="t5" disabled>
+										<label class="form-check-label" for="topic-5">
+											05: Simple Equations in One Variable
+										</label>
+									</div>
+								</div>
+
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
+											id="topic-6" value="t6" disabled>
+										<label class="form-check-label" for="topic-6">
+											06: Angles and Parallel Lines
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="row row-cols-1 g-4">
+								<div class="col">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="quizEduTopicForm"
+											id="topic-7" value="t7" disabled>
+										<label class="form-check-label" for="topic-7">
+											07: Triangles, Quadrilaterals and Other Polygons
+										</label>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -229,34 +300,43 @@
 				<div class="tab-content">
 					<div id="daily" class="tab-pane fade">
 						<h3>DAILY PRACTICE</h3>
-						<p><em>INFO</em>: 7 questions, any topic(s) of your choice, any difficulty & spend points to get
+						<p><em>INFO</em>: 5 questions, any topic(s) of your choice, any difficulty & spend
+							points to get
 							hints -> earn
 							points by completing questions</p>
 						<div class="d-grid gap-2 col-12 mx-auto">
-							<button class="btn btn-warning" type="button" id="quiz-daily-start-btn">Start
-								Practice!</button>
+							<button class="btn btn-warning" type="button" id="quiz-daily-start-btn">
+								<h5>Start
+									Daily Practice!</h5>
+							</button>
 						</div>
 					</div>
 
 					<div id="norm" class="tab-pane fade">
 						<h3>NORMAL PRACTICE</h3>
-						<p><em>INFO</em>: 15 questions, any topic(s) of your choice, any difficulty allowed & spend
+						<p><em>INFO</em>: 10 questions, any topic(s) of your choice, any difficulty allowed &
+							spend
 							points to get hints -> earn
 							points by completing questions</p>
 						<div class="d-grid gap-2 col-12 mx-auto">
-							<button class="btn btn-warning" type="button" id="quiz-daily-start-btn">Start
-								Practice!</button>
+							<button class="btn btn-success" type="button" id="quiz-daily-start-btn">
+								<h5>Start
+									Normal Practice!</h5>
+							</button>
 						</div>
 					</div>
 
 					<div id="hard" class="tab-pane fade">
 						<h3>HARD PRACTICE</h3>
-						<p><em>INFO</em>: 15 questions, any topic(s) of your choice, tier 2 difficulty and above & no
+						<p><em>INFO</em>: 10 questions, any topic(s) of your choice, tier 2 difficulty and above
+							& no
 							hints allowed -> Points awarded
 							for questions will be double of other quizzes</p>
 						<div class="d-grid gap-2 col-12 mx-auto">
-							<button class="btn btn-warning" type="button" id="quiz-daily-start-btn">Start
-								Practice!</button>
+							<button class="btn btn-danger" type="button" id="quiz-daily-start-btn">
+								<h5>Start
+									Hard Practice!</h5>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -271,8 +351,7 @@
 		when btn is clicked and only show selected qn)-->
 
 	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-		Launch static backdrop modal
+	<button class="btn" data-bs-toggle="modal" id="modalBtn" data-bs-target="#staticBackdrop">
 	</button>
 
 	<!-- Modal -->

@@ -62,23 +62,26 @@
 
 }
 
-#quiz-edu, #quiz-topic{
+#quiz-edu, #quiz-edu-topic {
     height: 0px;
-    overflow-y: hidden;
+    overflow-y: scroll;
     z-index: 1;
 }
 
-#quiz-edu.formDisplayed, #quiz-topic.formDisplayed {
-    height: 220px;
+#quiz-edu.formDisplayed {
+    height: 320px;
     border: 1px solid blue;
     border-radius: 10px;
     background-color: white;
 }
 
 #quiz-edu-btn, #quiz-topic-btn{
-    margin-top: 8px;
+    margin-top: 15px;
 }
-#quiz-edu-btn .filled, #quiz-topic-btn .filled {
-    background-color: palegreen;
-    color: black;
+
+#modalBtn {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    z-index: 1;
 }
