@@ -19,11 +19,6 @@ $(document).ready(function () {
         $("#quiz-edu").toggleClass("formDisplayed");
     })
 
-    $("#quiz-topic-btn").on("click", function (e) {
-        e.preventDefault();
-        $("#quiz-topic").toggleClass("formDisplayed");
-    })
-
     //quiz modal, toggle tab func.
     $(".quizQnTabs").on("click", function (e) {
         e.preventDefault();

@@ -149,6 +149,7 @@ $(document).ready(function () {
                 for (i = 0; i < selectedQns.length; i++) {
                     qnTemplateAssignNum = Math.floor(Math.random() * 4)
 
+                    let diff = selectedQns[i][0].difficulty
                     let quizQn = selectedQns[i][0].question
                     let qnHint = selectedQns[i][0].hint
                     let ansCorrect = selectedQns[i][0].correct
@@ -160,9 +161,11 @@ $(document).ready(function () {
                     if (qnTemplateAssignNum == 0) {
 
                         quizQnsList.push({
+                            type: 1,
                             qnNum: qnNumTemp,
                             qn: quizQn,
                             hint: qnHint,
+                            difficulty: diff,
 
                             opt1: ansCorrect,
 
@@ -177,9 +180,11 @@ $(document).ready(function () {
                     //ans = opt 2
                     if (qnTemplateAssignNum == 1) {
                         quizQnsList.push({
+                            type: 2,
                             qnNum: qnNumTemp,
                             qn: quizQn,
                             hint: qnHint,
+                            difficulty: diff,
                             opt1: ansWrong1,
 
                             opt2: ansCorrect,
@@ -193,9 +198,11 @@ $(document).ready(function () {
                     //ans = opt 3
                     if (qnTemplateAssignNum == 2) {
                         quizQnsList.push({
+                            type: 3,
                             qnNum: qnNumTemp,
                             qn: quizQn,
                             hint: qnHint,
+                            difficulty: diff,
                             opt1: ansWrong1,
                             opt2: ansWrong2,
 
@@ -209,9 +216,11 @@ $(document).ready(function () {
                     //ans = opt 4
                     if (qnTemplateAssignNum == 3) {
                         quizQnsList.push({
+                            type: 4,
                             qnNum: + qnNumTemp,
                             qn: quizQn,
                             hint: qnHint,
+                            difficulty: diff,
                             opt1: ansWrong1,
                             opt2: ansWrong2,
                             opt3: ansWrong3,
@@ -265,30 +274,25 @@ $(document).ready(function () {
                                         <label class="btn btn-outline-success" for="qn${quizQnsList[i].qnNum}opt4">${quizQnsList[i].opt4}</label>
                                     </div></td>
                                 </tr>
-
-                                <tr>
-                                    <td>
-                                        <button type="button" class="btn btn-secondary getHint" id="hint${quizQnsList[i].qnNum}">Hint</button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>`
                 }
 
-                //add footer --> submit btn
-                dailyContent = `${dailyContent}
-                <div class="modal-footer">
-                    <a href="#" type="button" class="btn btn-info" id="submitDailyQuiz">Submit</a>
-                </div>`;
                 $("#modalContent").html(dailyContent);
+                console.log(quizQnsList)
 
             }); //end of ajax call
         }
     }); //end of start quiz btn
 
+    $("#hint1").on("click", function () {
+        console.log("i too have been clicked")
+    })
+
     $("#submitDailyQuiz").on("click", function (e) {
         e.preventDefault()
+        let quizError = false
         console.log("button has been clicked")
         let q1Ans = $('input[name="qn1"]:checked');
         let q2Ans = $('input[name="qn2"]:checked');
@@ -296,15 +300,118 @@ $(document).ready(function () {
         let q4Ans = $('input[name="qn4"]:checked');
         let q5Ans = $('input[name="qn5"]:checked');
 
-        console.log(q1Ans)
+        //validation - ensure all questions have vals
+        if ((q1Ans.length == 0) || (q2Ans.length == 0) || (q3Ans.length == 0) || (q4Ans.length == 0) || (q5Ans.length == 0)) {
+            let quizError = true
+            console.log("errors found")
+
+            //add red tag to relevant area to notify of error
+            if (q1Ans.length == 0) {
+                $(" #E1").addClass("errNotif")
+            } else {
+                $(" #E1 .errNotif").removeClass("errNotif")
+            }
+
+            if (q2Ans.length == 0) {
+                $(" #E2").addClass("errNotif")
+            } else {
+                $(" #E2 .errNotif").removeClass("errNotif")
+            }
+
+            if (q3Ans.length == 0) {
+                $(" #E3").addClass("errNotif")
+            } else {
+                $(" #E3 .errNotif").removeClass("errNotif")
+            }
+
+            if (q4Ans.length == 0) {
+                $(" #E4").addClass("errNotif")
+            } else {
+                $(" #E4 .errNotif").removeClass("errNotif")
+            }
+
+            if (q5Ans.length == 0) {
+                $(" #E5").addClass("errNotif")
+            } else {
+                $(" #E5 .errNotif").removeClass("errNotif")
+            }
+        } else {
+            $(".errNotif").removeClass("errNotif")
+        }
+
+        let points = 0
+        //check answers
+        if (quizError == false) {
+            //check ans 1
+            if (q1Ans[0].getAttribute('id').charAt(6) == quizQnsList[0].type) {
+                points += parseInt(quizQnsList[0].difficulty)
+                $("#E1").addClass("correctAns")
+            }
+        }
+
+        if (quizError == false) {
+            //check ans 2
+            if (q2Ans[0].getAttribute('id').charAt(6) == quizQnsList[1].type) {
+                points += parseInt(quizQnsList[1].difficulty)
+                $("#E2").addClass("correctAns")
+            }
+        }
+
+        if (quizError == false) {
+            //check ans 3
+            if (q3Ans[0].getAttribute('id').charAt(6) == quizQnsList[2].type) {
+                points += parseInt(quizQnsList[2].difficulty)
+                $("#E3").addClass("correctAns")
+            }
+        }
+
+        if (quizError == false) {
+            //check ans 4
+            if (q4Ans[0].getAttribute('id').charAt(6) == quizQnsList[3].type) {
+                points += parseInt(quizQnsList[3].difficulty)
+                $("#E4").addClass("correctAns")
+            }
+        }
+
+        if (quizError == false) {
+            //check ans 5
+            if (q5Ans[0].getAttribute('id').charAt(6) == quizQnsList[4].type) {
+                points += parseInt(quizQnsList[4].difficulty)
+                $("#E5").addClass("correctAns")
+            }
+        }
 
         //update quiz box, with user results
+        //clear html
+        $("#modalContent").html('')
+        let score = ''
+        score = `${score}
+        <div class='row'>
+            <div class="col align-start">
+                <h5>You scored ${points} point(s)</h5>
+                <p>You may exit by clicking the cross on the top right corner of this pop-up</p>
+            </div>
+        </div>`
+
+        if (points <= 2) {
+            score = `${score}
+            <p>Try harder next time! You got this!</p>`
+        }
+
+        $("#modalContent").html(score)
         //<button type="button" class="btn btn-secondary" id="closeQuiz" data-bs-dismiss="modal">Close</button>
 
 
     }); //end of submit quiz btn
 
-    //clear quiz
-    //$("#modalContent").html("");
+    //quit quiz btn
+    $("#quitQuiz").on("click", function () {
+
+        //clear quiz
+        $("#modalContent").html("");
+
+        //clear correct ans css
+        $(".correctAns").removeClass("correctAns");
+    }); //end of quit quiz btn
 
 }); //End of doc

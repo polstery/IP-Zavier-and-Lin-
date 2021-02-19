@@ -15,7 +15,7 @@
     <nav class="navbar navbar-light" id="nav">
         <a class="navbar-brand mb-0 h1" href="#">
             <img src="../img/logo.png" alt="logo" width="60px" height="auto" class="d-inline-block align-center">
-            Forum
+            MATH TEXT
         </a>
         <button class="navbar-toggler" id="menu-toggle" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -56,8 +56,8 @@
         <div class="row justify-content-center">
             <!--EMBEDED SketchFab "video" + interactions-->
             <div class="col-lg-4">
-                <div class="sketchfab-embed-wrapper" id="sketchfab">
-                    <iframe title="Snake" width="100%" height="450px"
+                <div class="sketchfab-embed-wrapper">
+                    <iframe title="Snake" width="100%" height="470px"
                         src="https://sketchfab.com/models/04a6181efb1f4ba1b226b935d9062fe4/embed?autospin=0&autostart=1&ui_stop=0&ui_infos=0&ui_hint=0&ui_theme=0">
                     </iframe>
                 </div>
@@ -66,15 +66,41 @@
 
             <!--Forum section-->
             <div class="col-lg-7" id="forum-section">
+                <p>SIDE NOTE: There were issues in obtaining information from the restDB API</p>
                 <!--implement via js, use template boxes..etc-->
+                <button class="btn btn-warning" id="makeDisc">Start a Discussion!</button>
+
+                <div id="discParaForm" class="bg-light hiddenForm">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" placeholder="Enter the name of Discussion here"
+                            id="discName"></textarea>
+                        <label for="floatingTextarea">Enter the name of Discussion here:</label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" style="height: 150px;" type="text"
+                            placeholder="Enter the Description of Discussion here" id="discDesc"></textarea>
+                        <label for="floatingTextarea">Enter the Description of Discussion here:</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="postDisc">Submit</button>
+                </div>
 
                 <!--Forum "box" showing 3 latest comments, use pill func to replace current page-col with specific forum-->
-                <div class="container-fluid">
-
+                <div class="container-fluid" id="postedForums" style="height: 500px; overflow-y: scroll;">
                 </div>
             </div>
         </div>
         <!--End of main body-->
+
+        <footer class="footer mt-auto py-3" id="foot">
+            <div class="container">
+                <span class="text-muted">
+                    terms and conditions
+                </span>
+                <span>
+                    copyright 1-2021 by IP Zavier and Lin. All Rights Reserved
+                </span>
+            </div>
+        </footer>
 
         <!--Script-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
