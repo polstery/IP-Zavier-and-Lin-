@@ -1,6 +1,6 @@
 # IP-Zavier-and-Lin-
 
-# NAME OF WEBPAGE : TOILET TIME NEWS TOP HEADLINE FINDER (sg)
+# NAME OF WEBPAGE : MATH TEXT
 
 WEB-LINK: https://polstery.github.io/IP-Zavier-and-Lin-/
  
@@ -49,3 +49,9 @@ Chibi section, wehere students can switch between the creatures that are display
 
 ### Media
 All links for used media can be found in the "img sources.txt file"
+
+
+### Contributions:
+- Zavier: Handled most of the javaScript functionality, as well as the webpage layouts
+- Lin: Did the layout wireframes, as well as code the webpage layouts.
+
